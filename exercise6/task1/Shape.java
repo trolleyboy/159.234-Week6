@@ -1,7 +1,6 @@
 package exercise6.task1;
 
 import java.awt.Point;
-import java.awt.Graphics;
 
 public abstract class Shape {
     
