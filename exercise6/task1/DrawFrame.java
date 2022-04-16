@@ -7,23 +7,27 @@ import javax.swing.JFrame;
 
 public class DrawFrame extends JFrame {
     
-    private TwoDimensionalShape[] shapes = new TwoDimensionalShape[1];
-
+    private Shape[] shapes = new Shape[1];
+    private IDraw[] d = new IDraw[1];
+    private IRotate[] r = new IRotate[1];
+    private EquilateralTriangle eqTriangle = new EquilateralTriangle(new Point(180,180), 100, 100);
 
     public void paint(Graphics g) {
         super.paint(g);
-        shapes[0] = new EquilateralTriangle(new Point(180,180), 100, 100);
-        for ( TwoDimensionalShape s : shapes ) {
-            System.out.println("The shape is a: " + s.getShapeName());
-            System.out.println("It's area is: " + s.calculateArea());
+        shapes[0] = eqTriangle;
+        d[0] = eqTriangle;
+        r[0] = eqTriangle;
+
+        for (int i = 0; i < shapes.length; i++) {
+            System.out.println("The shape is a: " + shapes[i].getShapeName());
+            System.out.println("It's area is: " + shapes[i].calculateArea());
             System.out.println("");
-            s.draw(g);
 
-            IRotate r = s;
-            r.rotateShape();
+            d[i].draw(g);
+
+            r[i].rotateShape();
             g.setColor(Color.RED);
-            s.draw(g);
-
+            d[i].draw(g);
         }
     }
 

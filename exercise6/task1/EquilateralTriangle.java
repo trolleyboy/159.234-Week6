@@ -3,7 +3,7 @@ package exercise6.task1;
 import java.awt.Graphics;
 import java.awt.Point;
 
-public class EquilateralTriangle extends TwoDimensionalShape {
+public class EquilateralTriangle extends TwoDimensionalShape implements IDraw {
     
     // attributes
     private static final String SHAPENAME = "Equilateral Triangle";

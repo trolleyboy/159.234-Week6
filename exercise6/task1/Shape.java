@@ -8,7 +8,7 @@ public abstract class Shape {
     // attributes
     private int[] dimensions;
     private Point location;
-    
+
 
     // constructors
     public Shape(Point location) {
@@ -35,8 +35,6 @@ public abstract class Shape {
 
     //functions
     public abstract double calculateArea();
-
-    public abstract void draw(Graphics g);
 
     public abstract String getShapeName();
 
