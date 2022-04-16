@@ -8,6 +8,7 @@ public abstract class Shape {
     // attributes
     private int[] dimensions;
     private Point location;
+    
 
     // constructors
     public Shape(Point location) {

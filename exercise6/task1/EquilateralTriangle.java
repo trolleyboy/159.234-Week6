@@ -31,7 +31,7 @@ public class EquilateralTriangle extends TwoDimensionalShape {
         int xLocation = getLocation().x;
         int yLocation = getLocation().y;
         int[] xValues = {xLocation, xLocation + getWidth(), xLocation + getWidth()/2};
-        int[] yValues = {yLocation, yLocation, yLocation - (int)(Math.sqrt(3) * (getWidth()/2)) };
+        int[] yValues = {yLocation, yLocation, yLocation + (int)(Math.sqrt(3) * (getWidth()/2)) };
         g.fillPolygon(xValues, yValues, 3);
         
     }
