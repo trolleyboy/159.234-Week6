@@ -2,8 +2,9 @@ package tutorial6.task2;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import tutorial6.task3.IPayable;
 
-public abstract class Employee {
+public abstract class Employee implements IPayable{
     
     // attributes
     private String firstName;
@@ -46,6 +47,11 @@ public abstract class Employee {
 
     private BigDecimal rounded(BigDecimal number) {
         return number.setScale(2, ROUNDING_MODE);
+    }
+
+    @Override
+    public BigDecimal calculatePayment() {
+        return rounded(calculateEarnings());
     }
 
 }
